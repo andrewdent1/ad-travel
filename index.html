@@ -16,8 +16,61 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <style>
+        header {
+            background-color: transparent;
+        }
+
+        .header-colored {
+            background-color: #dc2525; /* Change this to your desired color */
+        }
+
         #home {
             font-family: "Playfair Display", serif;
+            background: 'movad-home-vid.mp4';
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 100px;
+            background-color: #FFFBF4;
+        }
+
+        .background-clip {
+            z-index: -1;
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.33);
+            z-index: 0;
+        }
+
+        .welcome-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .welcome-message h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .welcome-message p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
         }
     </style>
 </head>
@@ -43,27 +96,25 @@
                 <source src="movad-home-vid.mp4" type="video/mp4">
             </video>
         </div>
+        <div class="overlay"></div>
         <div class="welcome-message">
-            <h1>Welcome to Luxury Travel</h1>
+            <h1>Welcome to Luxury</h1>
             <p id="dynamic-message"></p>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Us</h2>
         <p>We offer luxury travel experiences tailored to your desires. From private tours to exclusive VIP experiences,
             we make your dream vacation a reality.</p>
     </section>
 
-    <!-- Blog Section -->
     <section id="blog">
         <h2>Our Blog</h2>
         <p>Stay updated with the latest travel trends, tips, and destination guides. Our blog offers inspiration for
             your next luxury getaway.</p>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
         <form id="contact-form">
@@ -77,7 +128,20 @@
         </form>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+
+    // You can adjust this value based on when you want the header to change color
+    if (scrollPosition > 1000) {
+        header.classList.add('header-colored');
+    } else {
+        header.classList.remove('header-colored');
+    }
+});
+
+    </script>
 </body>
 
 </html>
