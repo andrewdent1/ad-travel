@@ -65,12 +65,48 @@
 
         .welcome-message h1 {
             font-size: 3em;
+            font-weight: 300;
             margin: 0;
         }
 
         .welcome-message p {
             font-size: 1.5em;
             margin: 10px 0 0;
+        }
+
+        #about {
+            margin-left: 50px;
+            width: 50%;
+        }
+
+        #blog {
+            margin-left: 50px;
+        }
+
+        #contact {
+            margin-left: 50px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 200;
+            font-size: 2rem;
+            padding-bottom: 20px;
+        }
+
+        #about, #blog, #contact p {
+            font-family: 'Montserrat', serif;
+            font-weight: 300;
+        }
+
+        .about-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border-radius: 5%;
+            border-width: 1px;
+            font-family: 'Montserrat', serif;
+            font-weight: 500;
+            background-color: #FFFBF4;
         }
     </style>
 </head>
@@ -98,15 +134,14 @@
         </div>
         <div class="overlay"></div>
         <div class="welcome-message">
-            <h1>Welcome to Luxury</h1>
-            <p id="dynamic-message"></p>
+            <h1>Global Luxury Awaits</h1>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>We offer luxury travel experiences tailored to your desires. From private tours to exclusive VIP experiences,
-            we make your dream vacation a reality.</p>
+        <h2>Explore the world with us.</h2>
+        <p>Movad is here to help you get out and experience the world, one new destination at a time. Travelling with Movad allows you to go where you want, when you want, with who you want.</p>
+        <button class="about-button">About Movad</button>
     </section>
 
     <section id="blog">
@@ -129,15 +164,14 @@
     </section>
 
     <script src="script.js">
-        window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollPosition = window.scrollY;
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY;
 
-    // You can adjust this value based on when you want the header to change color
-    if (scrollPosition > 1000) {
-        header.classList.add('header-colored');
-    } else {
-        header.classList.remove('header-colored');
+        if (scrollPosition > 1000) {
+            header.classList.add('header-colored');
+        } else {
+            header.classList.remove('header-colored');
     }
 });
 

@@ -50,31 +50,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Section Styles */
-section {
-    text-align: center;
-}
-
-.sections {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-}
-
-.section {
-    background-color: #FFFBF4;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.section:hover {
-    background-color: #ddd;
-}
-
 #home, #about, #blog, #contact {
     height: 75vh;
-    background-color: #f9f9f9;
 }
 
 /* Contact Form Styles */
