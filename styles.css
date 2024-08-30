@@ -7,32 +7,44 @@
 
 /* Banner Styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #3E2905;
+    color: #FFFBF4;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+nav a.logo img {
+    padding: 5px 0px 5px 20px;
+
 }
 
 nav ul {
-    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Montserrat', serif;
+    font-weight: 300;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-right: 2rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -45,8 +57,8 @@ section {
     text-align: center;
 }
 
-#welcome {
-    margin: 20px 0;
+#home {
+    padding: 150px 0px;
 }
 
 .sections {
@@ -68,7 +80,8 @@ section {
     background-color: #ddd;
 }
 
-#about, #blog, #contact {
+#home, #about, #blog, #contact {
+    height: 75vh;
     background-color: #f9f9f9;
 }
 
