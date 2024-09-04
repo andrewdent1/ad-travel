@@ -14,3 +14,14 @@ function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
 }
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 250) {
+        header.classList.add('header-colored');
+    } else {
+        header.classList.remove('header-colored');
+    }
+});
